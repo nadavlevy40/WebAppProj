@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
-app.use(express.static('public'));
+const session = require('express-session');
+app.use(session({
+    secret: 'foo',
+    saveUninitialized: false,
+    resave: false
+}));
 
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use("/", require("./routes/login"));
 app.listen(80);
 console.log("server up and listening on port 80");
