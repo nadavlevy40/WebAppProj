@@ -27,6 +27,7 @@ function getLoggedUser(req, res) {
 }
 
 function findUser(username, password) {
+    // TODO: This is a stub. replace with user search in DB
     return (username === 'amit' && password === '123');
 }
 
