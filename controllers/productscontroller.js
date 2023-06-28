@@ -8,7 +8,7 @@ const createProduct = async (req,res) => {
   res.json(newProduct)
 }
 
-
+  
 const getProducts = async (req,res) => {
   const Products = await Productservice.getProducts();
   res.json(Products);
@@ -75,5 +75,6 @@ module.exports = {
     getProducts,
     getProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getMonthlyPurchaseData
 }
