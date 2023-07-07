@@ -1,18 +1,3 @@
-const express = require('express');
-const app = express();
-const port = 3000; // Choose a port number
-const path = require('path');
-
-// Define a route to serve your web application
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'thanksForPurchase', 'index.html'));
-  });
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
-
 // Initialize the Facebook SDK
 window.fbAsyncInit = function() {
     FB.init({
@@ -52,8 +37,3 @@ function shareOnFacebook() {
       }
     );
   }
-  
-  
-  // Attach the shareOnFacebook function to the button click event
-  document.getElementById('facebook-share').addEventListener('click', shareOnFacebook);
-  
