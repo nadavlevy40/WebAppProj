@@ -3,6 +3,7 @@
 function createProduct(event) {
     event.preventDefault();
     const name = document.getElementById('product-name').value;
+    alert(name + "successfuly added");
   
     // Send a request to the backend API to create the product
     fetch('/api/products', {
@@ -31,6 +32,7 @@ function createProduct(event) {
   function createSupplier(event) {
     event.preventDefault();
     const name = document.getElementById('supplier-name').value;
+
     // Retrieve other form data as needed
   
     // Send a request to the backend API to create the supplier
